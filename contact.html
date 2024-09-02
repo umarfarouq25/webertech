@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Demo Company</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* comlayout color palette */
+        body {
+            background-color: #ECF0F1; /* Light Gray */
+            color: #2C3E50; /* Dark Blue */
+        }
+        .navbar {
+            background-color: #2C3E50; /* Dark Blue */
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #FFFFFF; /* White */
+        }
+        .navbar-nav .nav-link {
+            color: #ECF0F1 !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #E74C3C !important;
+        }
+        footer {
+            background-color: #2C3E50; /* Dark Blue */
+            color: #FFFFFF; /* White */
+            padding: 20px 0;
+        }
+        .container-animated {
+            background-color: #FFFFFF; /* White */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            opacity: 0.5;
+            transform: translateY(20px);
+        }
+        .container-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .container-animated.shake {
+            animation: shake 0.5s ease;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .section-title {
+            color: #E74C3C; /* Bright Red */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .contact-form .form-control, .contact-form .btn {
+            border-radius: 8px;
+        }
+        .map-container {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 30px;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .social-links a {
+            color: #2C3E50;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #E74C3C; /* Bright Red */
+        }
+        .faq-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .faq-section ul li {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Demo Company</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage4.html">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product2.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart2.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashbord4.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="coupons.html">Deals and Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about4.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section class="container my-5">
+        <div class="container-animated" id="animated-container">
+            <h2 class="text-center section-title">Contact Us</h2>
+            
+            <!-- Contact Form -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Contact Form</h4>
+                        <form action="contact-form-handler.php" method="post" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="captcha">CAPTCHA</label>
+                                <input type="text" id="captcha" name="captcha" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Contact Information</h4>
+                        <p>Email: <a href="mailto:support@democompany.com">support@democompany.com</a></p>
+                        <p>Phone: +1 (123) 456-7890 (Mon-Fri, 9 AM - 5 PM EST)</p>
+                        <p>Address: 123 Tech Avenue, Suite 456, Tech City, TC 78901</p>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.6692797114415!2d-122.4018406846816!3d37.79395427975877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808d5d91e6b3%3A0x0!2zMTIzIFRlY2ggQXVlbnVlLCBTdWl0ZS00NTYsIFRlY2ggQ2l0eSwgVENfNzkwMDE!5e0!3m2!1sen!2sus!4v1617814674843!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Connect with Us</h4>
+                        <div class="social-links text-center">
+                            <a href="https://facebook.com/democompany" target="_blank" class="fab fa-facebook-f"></a>
+                            <a href="https://twitter.com/democompany" target="_blank" class="fab fa-twitter"></a>
+                            <a href="https://linkedin.com/company/democompany" target="_blank" class="fab fa-linkedin-in"></a>
+                            <a href="https://instagram.com/democompany" target="_blank" class="fab fa-instagram"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information for Specific Departments -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Department Contacts</h4>
+                        <p>Support: <a href="mailto:support@democompany.com">support@democompany.com</a></p>
+                        <p>Sales: <a href="mailto:sales@democompany.com">sales@democompany.com</a></p>
+                        <p>Technical Support: <a href="mailto:techsupport@democompany.com">techsupport@democompany.com</a></p>
+                        <p>Billing: <a href="mailto:billing@democompany.com">billing@democompany.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Business Hours</h4>
+                        <p>Monday - Friday: 9 AM - 5 PM EST</p>
+                        <p>Saturday - Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Contact Methods -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Additional Contact Methods</h4>
+                        <p>Live Chat: Available on our website during business hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback or Suggestion Box -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Feedback & Suggestions</h4>
+                        <form action="feedback-handler.php" method="post">
+                            <div class="form-group">
+                                <label for="feedback">Your Feedback</label>
+                                <textarea id="feedback" name="feedback" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Notice -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Privacy Notice</h4>
+                        <p>Your privacy is important to us. We ensure that all your personal information is handled confidentially and used only for responding to your inquiries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thank You Message -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Thank You</h4>
+                        <p>Thank you for reaching out to Demo Company. We appreciate your message and will get back to you as soon as possible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">FAQ</h4>
+                        <div class="faq-section">
+                            <ul>
+                                <li><strong>What is your return policy?</strong> We offer a 30-day return policy on all products.</li>
+                                <li><strong>How can I track my order?</strong> You can track your order using the tracking number sent to your email.</li>
+                                <li><strong>Do you offer international shipping?</strong> Yes, we ship worldwide. Shipping costs vary based on location.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Center Link -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="container-animated">
+                        <h4 class="section-title">Support Center</h4>
+                        <p>For further assistance, visit our <a href="support-center.html" class="btn btn-primary">Support Center</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Demo Company. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedContainers = document.querySelectorAll('.container-animated');
+            window.addEventListener('scroll', function() {
+                animatedContainers.forEach(container => {
+                    const rect = container.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                        container.classList.add('visible');
+                        container.classList.add('shake');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

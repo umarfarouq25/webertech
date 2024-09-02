@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ECF0F1;
+            color: #2C3E50;
+        }
+
+        .navbar {
+            background-color: #2C3E50;
+        }
+
+        .navbar-brand {
+            color: #ECF0F1;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ECF0F1;
+        }
+
+        .container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .accordion {
+            width: 25%;
+            background-color: #34495E;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .accordion button {
+            width: 100%;
+            background-color: #2C3E50;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .accordion button:hover, .accordion button.active {
+            background-color: #1ABC9C;
+        }
+
+        .content-area {
+            width: 70%;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">YourCompany</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">☰</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage4.html">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product2.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart2.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashbord4.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="coupons.html">Deals and Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about4.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Payment Method Container -->
+    <div class="container">
+        <div class="accordion">
+            <button onclick="showContent('card')">Card Payment</button>
+            <button onclick="showContent('paypal')">PayPal</button>
+            <button onclick="showContent('paystack')">Paystack</button>
+            <button onclick="showContent('remita')">Remita</button>
+            <button onclick="showContent('wallet')">Wallet</button>
+            <button onclick="showContent('flutterwave')">Flutterwave</button>
+            <button onclick="showContent('bankTransfer')">Bank Transfer</button>
+        </div>
+
+        <div class="content-area">
+            <!-- Default Payment Method: Card -->
+            <div id="cardPayment" class="payment-method">
+                <h3>Card Payment</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName">Cardholder's Name</label>
+                        <input type="text" class="form-control" id="cardName" placeholder="Enter cardholder's name">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Payment</button>
+                </form>
+            </div>
+            <div id="paypalPayment" class="payment-method" style="display: none;">
+                <h3>PayPal</h3>
+                <p>PayPal Payment Method Details</p>
+            </div>
+            <div id="paystackPayment" class="payment-method" style="display: none;">
+                <h3>Paystack</h3>
+                <p>Paystack Payment Method Details</p>
+            </div>
+            <div id="remitaPayment" class="payment-method" style="display: none;">
+                <h3>Remita</h3>
+                <p>Remita Payment Method Details</p>
+            </div>
+            <div id="walletPayment" class="payment-method" style="display: none;">
+                <h3>Wallet</h3>
+                <p>Wallet Payment Method Details</p>
+            </div>
+            <div id="flutterwavePayment" class="payment-method" style="display: none;">
+                <h3>Flutterwave</h3>
+                <p>Flutterwave Payment Method Details</p>
+            </div>
+            <div id="bankTransferPayment" class="payment-method" style="display: none;">
+                <h3>Bank Transfer</h3>
+                <p>Bank Transfer Payment Method Details</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showContent(method) {
+            const methods = ['card', 'paypal', 'paystack', 'remita', 'wallet', 'flutterwave', 'bankTransfer'];
+            methods.forEach(m => {
+                document.getElementById(m + 'Payment').style.display = 'none';
+            });
+            document.getElementById(method + 'Payment').style.display = 'block';
+        }
+
+        // Set default display
+        document.addEventListener('DOMContentLoaded', (event) => {
+            showContent('card');
+        });
+    </script>
+</body>
+</html>

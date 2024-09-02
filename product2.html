@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Computer Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #2C3E50;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 15px 0;
+            position: relative;
+        }
+        .navbar {
+            margin-bottom: 0;
+        }
+        .navbar-nav .nav-link {
+            color: #ECF0F1 !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #887f7f !important;
+        }
+        .filter-section {
+            padding: 20px 0;
+            background-color: #838a9e;
+            border-bottom: 1px solid #BDC3C7;
+        }
+        .filter-section h2 {
+            color: #FFFFFF;
+        }
+        .filter-section .checkbox-group label {
+            color: #FFFFFF;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .product-section {
+            background-color: #ECF0F1;
+            padding: 40px 0;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product-card .card-body {
+            padding: 15px;
+        }
+        .footer {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Computer Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage4.html">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product2.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart2.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashbord4.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coupons.html">Deals and Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about4.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="container">
+            <h2>Filter Products</h2>
+            <div class="checkbox-group">
+                <label><input type="checkbox" class="filter-checkbox" data-filter="hp"> HP</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="samsung"> Samsung</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="dell"> Dell</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="toshiba"> Toshiba</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="apple"> Apple</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="asus"> Asus</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter="lenovo"> Lenovo</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container product-section">
+        <div class="row" id="productContainer">
+            <!-- Product Cards will be dynamically added here -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Computer and Laptop Store</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const products = [];
+        const brands = ['hp', 'samsung', 'dell', 'toshiba', 'apple', 'asus', 'lenovo'];
+
+        // Generate sample products (98 cards)
+        for (let i = 1; i <= 98; i++) {
+            let brand = brands[i % brands.length];
+            products.push({
+                id: i,
+                brand: brand,
+                image: 'pc1.jpeg',
+                title: `Computer Model ${i}`,
+                price: `$${(Math.random() * 1000 + 500).toFixed(2)}`
+            });
+        }
+
+        function renderProducts(products) {
+            const container = document.getElementById('productContainer');
+            container.innerHTML = '';
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'col-md-3 mb-4';
+                card.innerHTML = `
+                    <div class="product-card" data-brand="${product.brand}">
+                        <img src="${product.image}" alt="${product.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.title}</h5>
+                            <p class="card-text">${product.price}</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterProducts() {
+            const selectedFilters = Array.from(document.querySelectorAll('.filter-checkbox:checked')).map(cb => cb.getAttribute('data-filter'));
+            const filteredProducts = selectedFilters.length > 0 ? products.filter(product => selectedFilters.includes(product.brand)) : products;
+            renderProducts(filteredProducts);
+        }
+
+        document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', filterProducts);
+        });
+
+        // Initial render
+        renderProducts(products);
+    </script>
+</body>
+</html>

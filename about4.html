@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Demo Company</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* comlayout color palette */
+        body {
+            background-color: #ECF0F1; /* Light Gray */
+            color: #2C3E50; /* Dark Blue */
+        }
+        .navbar {
+            background-color: #2C3E50; /* Dark Blue */
+        }
+        .navbar-brand {
+            color: #FFFFFF; /* White */
+        }
+        .navbar-nav .nav-link {
+            color: #ECF0F1 !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #E74C3C !important;
+        }
+        .navbar-nav .nav-link {
+            color: #FFFFFF; /* White */
+        }
+        footer {
+            background-color: #2C3E50; /* Dark Blue */
+            color: #FFFFFF; /* White */
+            padding: 20px 0;
+        }
+        .container-animated {
+            background-color: #FFFFFF; /* White */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .container-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .container-animated.shake {
+            animation: shake 0.5s ease;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        .section-title {
+            color: #E74C3C; /* Bright Red */
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: #FFFFFF; /* White */
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Demo Company</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage4.html">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product2.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart2.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashbord4.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="coupons.html">Deals and Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about4.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section class="container my-5">
+        <div class="container-animated" id="animated-container">
+            <h2 class="text-center section-title">About Us</h2>
+
+            <!-- Company Overview -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Company Overview</h4>
+                    <p>Demo Company is a leading provider of high-quality computers and laptops. We specialize in offering the latest technology from top brands at competitive prices. Our target audience includes tech enthusiasts, businesses, and everyday consumers looking for reliable and affordable computing solutions.</p>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Mission Statement</h4>
+                    <p>Our mission is to deliver exceptional computing products and services that meet the diverse needs of our customers. We are committed to innovation, quality, and customer satisfaction.</p>
+                </div>
+            </div>
+
+            <!-- Vision Statement -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Vision Statement</h4>
+                    <p>Our vision is to be a global leader in the technology industry, known for our innovative solutions and commitment to customer excellence. We aim to continuously advance our products and services to exceed customer expectations.</p>
+                </div>
+            </div>
+
+            <!-- History/Background -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">History/Background</h4>
+                    <p>Founded in 2010, Demo Company began with a mission to provide high-quality technology solutions at affordable prices. Over the years, we have grown significantly, achieving several milestones including partnerships with major tech brands and expanding our product line. Our journey reflects our dedication to innovation and customer satisfaction.</p>
+                </div>
+            </div>
+
+            <!-- Team Introduction -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Team Introduction</h4>
+                    <div class="row">
+                        <div class="col-md-3 team-member">
+                            <img src="pc1.jpeg" alt="John Doe">
+                            <h5>John Doe</h5>
+                            <p>CEO & Founder</p>
+                            <p>John is the visionary behind Demo Company, leading the team with a passion for technology and innovation.</p>
+                        </div>
+                        <div class="col-md-3 team-member">
+                            <img src="pc2.jpeg" alt="Jane Smith">
+                            <h5>Jane Smith</h5>
+                            <p>CTO</p>
+                            <p>Jane oversees our technology strategies and ensures that we stay at the forefront of tech advancements.</p>
+                        </div>
+                        <div class="col-md-3 team-member">
+                            <img src="pc3.jpeg" alt="Alice Johnson">
+                            <h5>Alice Johnson</h5>
+                            <p>COO</p>
+                            <p>Alice manages our daily operations and ensures smooth execution of our business processes.</p>
+                        </div>
+                        <div class="col-md-3 team-member">
+                            <img src="pc4.jpeg" alt="Bob Brown">
+                            <h5>Bob Brown</h5>
+                            <p>Marketing Director</p>
+                            <p>Bob leads our marketing efforts, driving our brand presence and customer engagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Values -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Company Values</h4>
+                    <ul>
+                        <li>Integrity: We uphold the highest standards of honesty and transparency.</li>
+                        <li>Customer Focus: We prioritize our customers' needs and strive to exceed their expectations.</li>
+                        <li>Innovation: We continuously seek new ways to improve and innovate our products and services.</li>
+                        <li>Excellence: We are committed to delivering exceptional quality in everything we do.</li>
+                        <li>Teamwork: We value collaboration and teamwork to achieve our goals.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Awards and Achievements -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Awards and Achievements</h4>
+                    <p>Our commitment to excellence has been recognized with several awards, including:</p>
+                    <ul>
+                        <li>Best Tech Retailer 2022</li>
+                        <li>Top Customer Service Award 2021</li>
+                        <li>Innovative Technology Solutions 2020</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Customer Testimonials -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Customer Testimonials</h4>
+                    <div class="card p-4 mb-3">
+                        <p>"Demo Company provided us with excellent products and exceptional service. Highly recommend!" - Alex R.</p>
+                    </div>
+                    <div class="card p-4 mb-3">
+                        <p>"The team at Demo Company is fantastic. They helped us find exactly what we needed and the quality is top-notch." - Emma W.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Culture -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Company Culture</h4>
+                    <p>At Demo Company, we foster a collaborative and inclusive work environment. Our culture emphasizes innovation, professional growth, and a strong sense of community. We believe in creating a positive and dynamic workplace where every team member can thrive.</p>
+                </div>
+            </div>
+
+            <!-- Social Responsibility -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Social Responsibility</h4>
+                    <p>We are committed to making a positive impact on society and the environment. Our initiatives include:</p>
+                    <ul>
+                        <li>Supporting local charities and community projects</li>
+                        <li>Implementing sustainable practices in our operations</li>
+                        <li>Promoting technology education and digital inclusion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Company Location(s) -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Company Location(s)</h4>
+                    <p>Our headquarters are located at:</p>
+                    <p>123 Tech Avenue, Suite 456, Tech City, TC 78901</p>
+                    <p>We also have branch offices in:</p>
+                    <ul>
+                        <li>456 Innovation Road, Suite 789, Innovation City, IC 12345</li>
+                        <li>789 Business Blvd, Suite 101, Business Town, BT 67890</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h4 class="section-title">Contact Information</h4>
+                    <p>Feel free to reach out to us through the following channels:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:info@democompany.com">info@democompany.com</a></li>
+                        <li>Phone: +1 (123) 456-7890</li>
+                        <li>Address: 123 Tech Avenue, Suite 456, Tech City, TC 78901</li>
+                    </ul>
+                    <form action="contact-form-handler.php" method="post" class="mt-4">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Future Plans -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="section-title">Future Plans</h4>
+                    <p>Demo Company is focused on expanding our product offerings and entering new markets. We are also working on innovative projects to enhance our customer experience and drive technological advancements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Demo Company. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedContainer = document.getElementById('animated-container');
+            window.addEventListener('scroll', function() {
+                const rect = animatedContainer.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    animatedContainer.classList.add('visible');
+                    animatedContainer.classList.add('shake');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

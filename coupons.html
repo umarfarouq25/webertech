@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals and Offers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ECF0F1;
+        }
+
+        .navbar-custom {
+            background-color: #2C3E50;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            color: #ECF0F1;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: #ECF0F1;
+        }
+
+        .coupon-card {
+            background-color: #FFFFFF;
+            border: 1px solid #BDC3C7;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 200px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .coupon-card:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .coupon-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2C3E50;
+            padding: 20px;
+        }
+
+        .coupon-code {
+            font-size: 18px;
+            color: #E74C3C;
+            padding: 10px 20px;
+        }
+
+        .btn-copy {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-copy:hover {
+            background-color: #1A252F;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ECF0F1 !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #E74C3C !important;
+        }
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert.hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">Company Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage4.html">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product2.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart2.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashbord4.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="coupons.html">Deals and Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about4.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Deals and Offers Page -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Deals and Offers</h1>
+        <div class="row">
+            <!-- Coupon Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="coupon-card">
+                    <div class="coupon-title">Coupon</div>
+                    <div class="coupon-code">Code: 123456</div>
+                    <button class="btn-copy" onclick="copyToClipboard('123456')">Copy Codes</button>
+                </div>
+            </div>
+            <!-- Coupon Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="coupon-card">
+                    <div class="coupon-title">Coupon</div>
+                    <div class="coupon-code">Code: 123456</div>
+                    <button class="btn-copy" onclick="copyToClipboard('123456')">Copy Codes</button>
+                </div>
+            </div>
+            <!-- Add more coupon cards as needed -->
+            <div class="col-md-4 mb-4">
+                <div class="coupon-card">
+                    <div class="coupon-title">Coupon</div>
+                    <div class="coupon-code">Code: 123456</div>
+                    <button class="btn-copy" onclick="copyToClipboard('123456')">Copy Codes</button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="coupon-card">
+                    <div class="coupon-title">Coupon</div>
+                    <div class="coupon-code">Code: 123456</div>
+                    <button class="btn-copy" onclick="copyToClipboard('123456')">Copy Codes</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="coupon-card">
+                    <div class="coupon-title">Coupon</div>
+                    <div class="coupon-code">Code: 123456</div>
+                    <button class="btn-copy" onclick="copyToClipboard('123456')">Copy Codes</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="coupon-card">
+                    <div class="coupon-title">Coupon</div>
+                    <div class="coupon-code">Code: 123456</div>
+                    <button class="btn-copy" onclick="copyToClipboard('123456')">Copy Codes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div class="alert alert-success hide" id="alert">Copied!</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
+                showAlert();
+            }).catch(function (error) {
+                console.error('Failed to copy text: ', error);
+            });
+        }
+
+        function showAlert() {
+            const alert = document.getElementById('alert');
+            alert.classList.remove('hide');
+            alert.classList.add('show');
+            setTimeout(() => {
+                alert.classList.remove('show');
+                alert.classList.add('hide');
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

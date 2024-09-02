@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer and Laptop Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #2C3E50;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 15px 0;
+            position: relative;
+        }
+        .navbar {
+            margin-bottom: 0;
+        }
+        .navbar-nav .nav-link {
+            color: #ECF0F1 !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #E74C3C !important;
+        }
+        .hero {
+            background: url('pc1.jpeg') no-repeat center center;
+            background-size: cover;
+            color: #FFFFFF;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            min-height: 400px;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 62, 80, 0.5);
+            z-index: 1;
+        }
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3.5em;
+            margin: 0;
+        }
+        .btn-primary {
+            background-color: #E74C3C;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #c0392b;
+        }
+        .advertisement {
+            background-color: #ECF0F1;
+            padding: 30px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .advertisement h2 {
+            margin: 0;
+            color: #2C3E50;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .product-card img {
+            width: 100%;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .bot{
+            background-color: #2C3E50;
+            color: #FFFFFF;
+
+        }
+        .bot:hover{
+            background: #000;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Computer Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage4.html">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product2.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart2.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashbord4.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coupons.html">Deals and Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about4.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="hero">
+        <h1>Welcome to Webertech Computer and Laptop Store</h1>
+        <a href="login3.html" class=" btn btn-large px-5 py-3 mt-5 bot">Shop Now</a>
+    </div>
+    <div class="container mt-5">
+        <div class="advertisement">
+            <h2>Special Offer: 20% Off on All Laptops!   </h2>
+        </div>
+        <div class="row">
+            <!-- Product Cards -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="pc1.jpeg" alt="Laptop">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop Model A</h5>
+                        <p class="card-text">$999.99</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="pc2.jpeg" alt="Laptop">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop Model B</h5>
+                        <p class="card-text">$899.99</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="pc3.jpeg" alt="Computer">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Model C</h5>
+                        <p class="card-text">$1199.99</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="pc4.jpeg" alt="Computer">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Model D</h5>
+                        <p class="card-text">$1399.99</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Computer and Laptop Store</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #ECF0F1;
+        }
+
+        .navbar-custom {
+            background-color: #2C3E50;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            color: #ECF0F1;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: #ECF0F1;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .content-area {
+            margin-left: 20%;
+            padding: 20px;
+            background-color: #ECF0F1;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .nav-item {
+            margin-bottom: 10px;
+        }
+
+        .nav-item a {
+            color: #ECF0F1;
+        }
+
+        .nav-item a:hover {
+            color: #E74C3C;
+        }
+
+        .card-header.active {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+        }
+
+        .card-body {
+            background-color: #FFFFFF;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-custom">
+        <a class="navbar-brand" href="#">Company Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage4.html">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product2.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart2.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashbord4.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="coupons.html">Deals and Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about4.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+     <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h4>Demo User</h4>
+            <img src="pc1.jpeg" alt="Profile Picture" class="profile-picture">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#collapseAccountInfo" role="button" aria-expanded="false" aria-controls="collapseAccountInfo">
+                        Account Information
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#collapseOrderManagement" role="button" aria-expanded="false" aria-controls="collapseOrderManagement">
+                        Order Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#collapseWhitelistFavorite" role="button" aria-expanded="false" aria-controls="collapseWhitelistFavorite">
+                        Whitelist and Favorite
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#collapseSecurity" role="button" aria-expanded="false" aria-controls="collapseSecurity">
+                        Security
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#collapseFeedback" role="button" aria-expanded="false" aria-controls="collapseFeedback">
+                        Review and Feedback
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Account Information -->
+            <div class="collapse show" id="collapseAccountInfo">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Account Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Name: Demo User</p>
+                        <p>Email: demo@example.com</p>
+                        <p>Address details here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Management -->
+            <div class="collapse" id="collapseOrderManagement">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Order Management</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>List of current orders.</p>
+                        <p>Previous orders listed here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Whitelist and Favorite -->
+            <div class="collapse" id="collapseWhitelistFavorite">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Whitelist and Favorite</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Whitelisted Item #1<br>Whitelisted Item #2</p>
+                        <p>Favorite Item #1<br>Favorite Item #2</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security -->
+            <div class="collapse" id="collapseSecurity">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Security</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Change your password here.</p>
+                        <p>Enable/Disable two-factor authentication.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review and Feedback -->
+            <div class="collapse" id="collapseFeedback">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Review and Feedback</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Feedback content will be displayed here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.nav-link').on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                $(target).collapse('toggle');
+            });
+        });
+    </script>
+</body>
+
+</html>

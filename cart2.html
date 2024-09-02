@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Computer Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #2C3E50;
+            margin: 0;
+            padding: 0;
+            background-color: #ECF0F1;
+        }
+        .header {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 15px 0;
+            position: relative;
+        }
+        .navbar-nav .nav-link {
+            color: #ECF0F1 !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #E74C3C !important;
+        }
+        .cart-section {
+            padding: 40px 0;
+        }
+        .cart-section h2 {
+            color: #2C3E50;
+        }
+        .cart-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #FFFFFF;
+            display: flex;
+            align-items: center;
+        }
+        .cart-item img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .cart-item h5 {
+            margin: 0;
+            flex: 1;
+        }
+        .cart-item .price {
+            flex: 1;
+            font-size: 18px;
+        }
+        .cart-item .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+        .cart-item .quantity-controls button {
+            background-color: #2C3E50;
+            color: #FFFFFF;
+            border: none;
+            padding: 5px 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .cart-item .quantity-controls input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        .cart-item .remove-btn {
+            background-color: #E74C3C;
+            color: #FFFFFF;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .checkout-section {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .checkout-btn {
+            background-color: #E74C3C;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .checkout-btn:hover {
+            background-color: #C0392B;
+        }
+        .back-to-products {
+            background-color: #2C3E50;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .back-to-products:hover {
+            background-color: #34495E;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Computer Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage4.html">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product2.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart2.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashbord4.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coupons.html">Deals and Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about4.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="container cart-section">
+        <h2>Your Cart</h2>
+        
+        <a href="#" class="back-to-products">Back to Products</a>
+        
+        <div class="cart-item">
+            <img src="pc1.jpeg" alt="Product Image">
+            <h5>Computer Model 1</h5>
+            <span class="price">$999.99</span>
+            <div class="quantity-controls">
+                <button class="minus-btn">-</button>
+                <input type="text" value="1" readonly>
+                <button class="plus-btn">+</button>
+            </div>
+            <button class="remove-btn">Remove</button>
+        </div>
+        <!-- Add more cart-item divs as needed -->
+
+        <div class="checkout-section">
+            <h5>Total Price: $<span id="total-price">999.99</span></h5>
+            <button class="checkout-btn">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Function to update the total price
+        function updateTotalPrice() {
+            let totalPrice = 0;
+            document.querySelectorAll('.cart-item').forEach(item => {
+                const price = parseFloat(item.querySelector('.price').dataset.price);
+                const quantity = parseInt(item.querySelector('input').value);
+                totalPrice += price * quantity;
+            });
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+        }
+
+        // Quantity controls
+        document.querySelectorAll('.minus-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                let input = this.nextElementSibling;
+                let value = parseInt(input.value);
+                if (value > 1) {
+                    input.value = value - 1;
+                    updateTotalPrice();
+                }
+            });
+        });
+
+        document.querySelectorAll('.plus-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                let input = this.previousElementSibling;
+                let value = parseInt(input.value);
+                input.value = value + 1;
+                updateTotalPrice();
+            });
+        });
+
+        // Remove item
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.closest('.cart-item').remove();
+                updateTotalPrice();
+            });
+        });
+
+        // Set initial total price
+        document.addEventListener('DOMContentLoaded', updateTotalPrice);
+    </script>
+</body>
+</html>
